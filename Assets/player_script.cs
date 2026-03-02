@@ -29,6 +29,21 @@ public class player_script : MonoBehaviour
     private float jumpBufferCounter;
 
     private bool jumpHeld;
+    public static player_script Instance;
+
+    private void Awake()
+    {
+        if (Instance != null && Instance != this)
+        {
+            Destroy(this);
+
+        }
+        else
+        {
+            Instance = this;
+        }
+
+    }
 
     void Update()
     {
