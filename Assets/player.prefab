@@ -294,6 +294,10 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: 9caa3d8a-6b2f-4e8e-8bad-6ede561bd9be
     m_ActionName: UI/TrackedDeviceOrientation
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 28fbeace-6a99-40b9-8e3c-36afac118269
+    m_ActionName: 'Player/restatr[/Keyboard/r]'
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player
@@ -311,18 +315,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3845ec9dd0ab23e4dbb17ccecdb71001, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Rigidbody2D: {fileID: 3101102159149970404}
+  rb: {fileID: 3101102159149970404}
   speed: 10
   jumppower: 23
   variableJumpMultiplier: 0.5
   fallGravityMultiplier: 1.5
+  maxTiltAngle: 10
+  tiltSpeed: 10
+  jumpSquashX: 1.2
+  jumpSquashY: 0.8
+  jumpStretchX: 0.8
+  jumpStretchY: 1.2
+  scaleLerpSpeed: 18
   groundlayer:
     serializedVersion: 2
     m_Bits: 8
   groundcheck: {fileID: 3680422819995429436}
   coyoteTime: 0.15
   jumpBufferTime: 0.15
-  Horizontal: 0
   spriteRenderer: {fileID: 5691376454582610877}
 --- !u!114 &7512926280822789063
 MonoBehaviour:

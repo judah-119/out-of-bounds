@@ -95,8 +95,8 @@ GameObject:
   - component: {fileID: 1490446029371889258}
   - component: {fileID: 9042841282099962301}
   - component: {fileID: 5047071735756155565}
-  - component: {fileID: 5945839910113830223}
   - component: {fileID: 5448779929706007143}
+  - component: {fileID: 4383385081591654199}
   m_Layer: 0
   m_Name: endlevel
   m_TagString: Untagged
@@ -193,20 +193,6 @@ MonoBehaviour:
   color2: {r: 0.99215686, g: 0.5019608, b: 0.28235295, a: 1}
   color3: {r: 0.6754716, g: 0, b: 0.41915435, a: 1}
   color4: {r: 0, g: 0.8784314, b: 0.5921569, a: 1}
---- !u!114 &5945839910113830223
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8298723819496282118}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6da97b0a10373e44a9aef33b695d0b83, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  floatAmplitude: 0.25
-  floatSpeed: 3
 --- !u!61 &5448779929706007143
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -253,3 +239,15 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.8828125, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &4383385081591654199
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8298723819496282118}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23b33d41a59f1264cbc9e432bbf6a581, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
