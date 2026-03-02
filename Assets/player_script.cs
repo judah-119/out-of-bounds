@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 public class player_script : MonoBehaviour
 {
@@ -30,6 +31,7 @@ public class player_script : MonoBehaviour
 
     private bool jumpHeld;
     public static player_script Instance;
+
 
     private void Awake()
     {
@@ -165,6 +167,13 @@ public class player_script : MonoBehaviour
         if (context.canceled)
         {
             jumpHeld = false;
+        }
+    }
+    public void restart(InputAction.CallbackContext context)
+    {
+        if (context.started)
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
     }
 }
