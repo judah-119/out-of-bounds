@@ -210,6 +210,10 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 519420031}
+    - target: {fileID: 3206473686604865286, guid: 7e24ed77915893c4494f0f22332e35e1, type: 3}
+      propertyPath: m_SortingLayerID
+      value: -1571719163
+      objectReference: {fileID: 0}
     - target: {fileID: 3456967090984986781, guid: 7e24ed77915893c4494f0f22332e35e1, type: 3}
       propertyPath: m_Name
       value: shade
@@ -693,7 +697,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!43 &1173713754
+--- !u!43 &1136602855
 Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

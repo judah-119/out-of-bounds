@@ -100,7 +100,7 @@ BoxCollider2D:
   m_Enabled: 1
   serializedVersion: 3
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 01c75c1b5b246b343aae47b697ac7bed, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -203,6 +203,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 7242104220625300438}
   spriteShapeRenderer: {fileID: 0}
+  uiImage: {fileID: 0}
+  uiButton: {fileID: 0}
   color1: {r: 0, g: 0.28235295, b: 0.30980393, a: 1}
   color2: {r: 0.14901961, g: 0.05882353, b: 0.14901961, a: 1}
   color3: {r: 0.16078432, g: 0.21960784, b: 0.15294118, a: 1}

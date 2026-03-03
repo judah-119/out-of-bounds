@@ -1,9 +1,12 @@
+using JetBrains.Annotations;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class pausemanager : MonoBehaviour
 {
     public bool pause = false;
     public GameObject pausemenu;
+    public GameObject stting;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -29,4 +32,16 @@ public class pausemanager : MonoBehaviour
     {
         pause = !pause;
     }
+    public void quit()
+    {
+        Time.timeScale = 1.0f;
+        Application.Quit();
+    }
+    public void menu()
+    {
+        pause = !pause;
+        SceneManager.LoadScene(0);
+        
+    }
+
 }
