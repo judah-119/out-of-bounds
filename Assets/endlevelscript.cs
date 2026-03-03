@@ -11,7 +11,7 @@ public class endlevelscript : MonoBehaviour
     private Vector3 startPos;
     private float randomOffset;            
     public Animator animator;
-    public float transtime = 1f;
+    public float transtime;
 
     void Start()
     {
