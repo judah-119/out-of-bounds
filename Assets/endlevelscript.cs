@@ -1,14 +1,17 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class endlevelscript : MonoBehaviour
 {
     [Header("Floating Settings")]
-    public float floatAmplitude = 0.25f;   // How high/low it moves
-    public float floatSpeed = 3f;          // How fast it moves
+    public float floatAmplitude = 0.25f;   
+    public float floatSpeed = 3f;          
 
     private Vector3 startPos;
-    private float randomOffset;            // Random phase offset for unsynced movement
+    private float randomOffset;            
+    public Animator animator;
+    public float transtime = 1f;
 
     void Start()
     {
@@ -26,9 +29,18 @@ public class endlevelscript : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            Destroy(gameObject);
-            int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
-            SceneManager.LoadScene(currentSceneIndex + 1);
+            nextlevel();
         }
+    }
+    public void nextlevel()
+    {
+        StartCoroutine(loadlevel(SceneManager.GetActiveScene().buildIndex + 1));
+    }
+    IEnumerator loadlevel(int lvlindex)
+    {
+        animator.SetTrigger("start");
+        yield return new WaitForSeconds(transtime);
+        SceneManager.LoadScene(lvlindex);
+        Destroy(gameObject);
     }
 }

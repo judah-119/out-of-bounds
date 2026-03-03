@@ -189,6 +189,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 9042841282099962301}
   spriteShapeRenderer: {fileID: 0}
+  uiImage: {fileID: 0}
+  uiButton: {fileID: 0}
   color1: {r: 1, g: 0.54901963, b: 0.23137255, a: 1}
   color2: {r: 0.99215686, g: 0.5019608, b: 0.28235295, a: 1}
   color3: {r: 0.6754716, g: 0, b: 0.41915435, a: 1}
@@ -251,3 +253,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23b33d41a59f1264cbc9e432bbf6a581, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  floatAmplitude: 0.25
+  floatSpeed: 3
+  animator: {fileID: 0}
+  transtime: 0.65
