@@ -10,6 +10,8 @@ public class menumanagerscript : MonoBehaviour
     public GameObject pannel1;
     public GameObject pannel2;
     public bool which;
+    public GameObject setting;
+    public bool sttingopen = false;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -28,6 +30,14 @@ public class menumanagerscript : MonoBehaviour
         {
             select.SetActive(true);
         }
+        if (sttingopen == false)
+        {
+            setting.SetActive(false);
+        }
+        else
+        {
+            setting.SetActive(true);
+        }
         if (which == false)
         {
             pannel1.SetActive(false);
@@ -43,6 +53,10 @@ public class menumanagerscript : MonoBehaviour
     {
         selectopen = !selectopen;
     }
+    public void seting()
+    {
+        sttingopen = !sttingopen;
+    }
     public void quit()
     {
         Debug.Log("quitting");
@@ -56,4 +70,5 @@ public class menumanagerscript : MonoBehaviour
     {
         which = !which;
     }
+
 }
