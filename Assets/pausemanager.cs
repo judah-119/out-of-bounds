@@ -1,3 +1,4 @@
+using System;
 using JetBrains.Annotations;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -34,6 +35,7 @@ public class pausemanager : MonoBehaviour
     }
     public void quit()
     {
+        Debug.Log("quitting");
         Time.timeScale = 1.0f;
         Application.Quit();
     }
@@ -43,5 +45,4 @@ public class pausemanager : MonoBehaviour
         SceneManager.LoadScene(0);
         
     }
-
 }
