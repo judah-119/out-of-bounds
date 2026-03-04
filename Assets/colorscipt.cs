@@ -1,6 +1,6 @@
 using UnityEngine;
-using UnityEngine.U2D;      // SpriteShapeRenderer
-using UnityEngine.UI;       // UI Image & Button
+using UnityEngine.U2D;      
+using UnityEngine.UI;       
 
 public class colorscipt : MonoBehaviour
 {
@@ -8,7 +8,6 @@ public class colorscipt : MonoBehaviour
     public SpriteShapeRenderer spriteShapeRenderer;
 
     public Image uiImage;
-    public Button uiButton;
 
     public Color color1;
     public Color color2;
@@ -45,20 +44,18 @@ public class colorscipt : MonoBehaviour
                 break;
         }
 
-        // SpriteRenderer
+  
         if (spriteRenderer != null)
             spriteRenderer.color = selectedColor;
 
-        // SpriteShapeRenderer
+       
         if (spriteShapeRenderer != null)
             spriteShapeRenderer.color = selectedColor;
 
-        // UI Image
+        
         if (uiImage != null)
             uiImage.color = selectedColor;
 
-        // UI Button (changes the button's main graphic color)
-        if (uiButton != null && uiButton.targetGraphic != null)
-            uiButton.targetGraphic.color = selectedColor;
+
     }
 }

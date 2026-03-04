@@ -1,5 +1,3 @@
-using System;
-using JetBrains.Annotations;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -7,7 +5,8 @@ public class pausemanager : MonoBehaviour
 {
     public bool pause = false;
     public GameObject pausemenu;
-    public GameObject stting;
+    public GameObject setting;
+    public bool sttingopen = false;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -28,6 +27,14 @@ public class pausemanager : MonoBehaviour
             Time.timeScale = 1.0f;
             pausemenu.SetActive(false);
         }
+        if (sttingopen == false)
+        {
+            setting.SetActive(false);
+        }
+        else
+        {
+            setting.SetActive(true);
+        }
     }
     public void Pause()
     {
@@ -44,5 +51,9 @@ public class pausemanager : MonoBehaviour
         pause = !pause;
         SceneManager.LoadScene(0);
         
+    }
+    public void seting()
+    {
+        sttingopen = !sttingopen;
     }
 }
