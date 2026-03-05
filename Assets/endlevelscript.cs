@@ -4,7 +4,6 @@ using UnityEngine.SceneManagement;
 
 public class endlevelscript : MonoBehaviour
 {
-    [Header("Floating Settings")]
     public float floatAmplitude = 0.25f;   
     public float floatSpeed = 3f;          
 
@@ -12,6 +11,7 @@ public class endlevelscript : MonoBehaviour
     private float randomOffset;            
     public Animator animator;
     public float transtime;
+    public AudioSource audioSource;
 
     void Start()
     {
@@ -29,6 +29,7 @@ public class endlevelscript : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
+            audioSource.Play();
             nextlevel();
         }
     }

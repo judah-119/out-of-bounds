@@ -3,11 +3,15 @@ using UnityEngine;
 public class Coin : MonoBehaviour
 {
     [Header("Floating Settings")]
-    public float floatAmplitude = 0.25f;   // How high/low it moves
-    public float floatSpeed = 3f;          // How fast it moves
+    public float floatAmplitude = 0.25f;   
+    public float floatSpeed = 3f;          
 
     private Vector3 startPos;
-    private float randomOffset;            // Random phase offset for unsynced movement
+    private float randomOffset;   
+    public AudioSource audioSource;
+    public SpriteRenderer spriteRenderer;
+    public GameObject liht;
+    public BoxCollider2D boxCollider;
 
     void Start()
     {
@@ -25,7 +29,12 @@ public class Coin : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            Destroy(gameObject);
+            boxCollider.enabled = false;
+            liht.SetActive(false);
+            spriteRenderer.enabled = false;
+            audioSource.Play();
+            Destroy(gameObject,audioSource.clip.length);
+            
         }
     }
 }
