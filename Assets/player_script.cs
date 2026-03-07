@@ -73,9 +73,7 @@ public class player_script : MonoBehaviour
         SmoothScaleReturn();
     }
 
-    //=========================================================
-    // Movement
-    //=========================================================
+
 
     void HandleMovement()
     {
@@ -87,9 +85,7 @@ public class player_script : MonoBehaviour
             spriteRenderer.flipX = false;
     }
 
-    //=========================================================
-    // Tilt
-    //=========================================================
+
 
     void HandleTilt()
     {
@@ -104,9 +100,7 @@ public class player_script : MonoBehaviour
         );
     }
 
-    //=========================================================
-    // Jump Logic
-    //=========================================================
+
 
     void TryJump()
     {
@@ -163,9 +157,7 @@ public class player_script : MonoBehaviour
         }
     }
 
-    //=========================================================
-    // Timers
-    //=========================================================
+    
 
     void HandleCoyoteTime()
     {
@@ -181,9 +173,7 @@ public class player_script : MonoBehaviour
             jumpBufferCounter -= Time.deltaTime;
     }
 
-    //=========================================================
-    // Input
-    //=========================================================
+
 
     public void Move(InputAction.CallbackContext context)
     {
@@ -217,9 +207,7 @@ public class player_script : MonoBehaviour
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
-    //=========================================================
-    // Ground Check
-    //=========================================================
+
 
     bool isgrounded()
     {

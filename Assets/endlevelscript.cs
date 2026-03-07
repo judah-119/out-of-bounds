@@ -12,6 +12,7 @@ public class endlevelscript : MonoBehaviour
     public Animator animator;
     public float transtime;
     public AudioSource audioSource;
+    public BoxCollider2D boxCollider;
 
     void Start()
     {
@@ -29,6 +30,7 @@ public class endlevelscript : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
+            boxCollider.enabled = false;
             audioSource.Play();
             nextlevel();
         }

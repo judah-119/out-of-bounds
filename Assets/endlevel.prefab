@@ -258,6 +258,7 @@ MonoBehaviour:
   animator: {fileID: 0}
   transtime: 0.75
   audioSource: {fileID: 518727365561531850}
+  boxCollider: {fileID: 5448779929706007143}
 --- !u!82 &518727365561531850
 AudioSource:
   m_ObjectHideFlags: 0
