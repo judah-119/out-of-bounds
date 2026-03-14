@@ -83,8 +83,16 @@ SpriteShapeRenderer:
   m_SortingOrder: 0
   m_Color: {r: 0, g: 0.28235295, b: 0.30980393, a: 1}
   m_MaskInteraction: 0
-  m_ShapeTexture: {fileID: 0}
-  m_Sprites: []
+  m_ShapeTexture: {fileID: 2800000, guid: b281b91a70a624a0da1c43adc1c30c7b, type: 3}
+  m_Sprites:
+  - {fileID: 21300000, guid: 608e61deb05c54660bebf5a4dd2ee02d, type: 3}
+  - {fileID: 21300000, guid: 608e61deb05c54660bebf5a4dd2ee02d, type: 3}
+  - {fileID: 21300000, guid: 608e61deb05c54660bebf5a4dd2ee02d, type: 3}
+  - {fileID: 21300000, guid: 608e61deb05c54660bebf5a4dd2ee02d, type: 3}
+  - {fileID: 21300000, guid: 608e61deb05c54660bebf5a4dd2ee02d, type: 3}
+  - {fileID: 21300000, guid: 608e61deb05c54660bebf5a4dd2ee02d, type: 3}
+  - {fileID: 21300000, guid: 608e61deb05c54660bebf5a4dd2ee02d, type: 3}
+  - {fileID: 21300000, guid: 608e61deb05c54660bebf5a4dd2ee02d, type: 3}
   m_LocalAABB:
     m_Center: {x: 0, y: 0, z: 0}
     m_Extent: {x: 2, y: 1, z: 0}
@@ -162,7 +170,12 @@ MonoBehaviour:
   - {x: 2, y: 1}
   - {x: 1, y: -1}
   - {x: -1, y: -1}
-  m_ShadowSegment: []
+  m_ShadowSegment:
+  - {x: -1, y: -1}
+  - {x: -2, y: 1}
+  - {x: 2, y: 1}
+  - {x: 1, y: -1}
+  - {x: -1, y: -1}
 --- !u!114 &6335499700759816450
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -178,7 +191,6 @@ MonoBehaviour:
   spriteRenderer: {fileID: 0}
   spriteShapeRenderer: {fileID: 8089122215616670890}
   uiImage: {fileID: 0}
-  uiButton: {fileID: 0}
   color1: {r: 0, g: 0.28235295, b: 0.30980393, a: 1}
   color2: {r: 0.14901961, g: 0.05882353, b: 0.14901961, a: 1}
   color3: {r: 0.16078432, g: 0.21960784, b: 0.15294118, a: 1}
@@ -265,7 +277,7 @@ MonoBehaviour:
     m_Mesh: {fileID: 0}
     m_LocalBounds:
       m_Center: {x: 0, y: 0, z: 0}
-      m_Extent: {x: 0, y: 0, z: 0}
+      m_Extent: {x: 2, y: 1, z: 0}
     m_EdgeProcessing: 1
     m_TrimEdge: 0
     m_FlipX: 0

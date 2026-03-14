@@ -11,6 +11,7 @@ public class levelscript : MonoBehaviour
     public Animator animator;
     public float transtime;
     public Image image;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -22,11 +23,18 @@ public class levelscript : MonoBehaviour
     void Update()
     {
         t.text = level.ToString();
+        if (level > poopoo.instance.level)
+        {
+            image.color = Color.gray;
+        }
+            
     }
     public void click()
     {
-       
-        StartCoroutine(loadlevel(level));
+        if (level <= poopoo.instance.level)
+        {
+            StartCoroutine(loadlevel(level));
+        }
     }
     IEnumerator loadlevel(int lvlindex)
     {

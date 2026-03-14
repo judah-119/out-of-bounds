@@ -11,7 +11,6 @@ public class menumanagerscript : MonoBehaviour
     public bool which;
     public GameObject setting;
     public bool sttingopen = false;
-    public bool unlockall = false;
     public static menumanagerscript Instance;
 
     private void Awake()
@@ -83,5 +82,12 @@ public class menumanagerscript : MonoBehaviour
     {
         which = !which;
     }
-
+    public void unlockall()
+    {
+        poopoo.instance.level = 500;
+    }
+    public void restart()
+    {
+        poopoo.instance.level = 1;
+    }
 }

@@ -336,7 +336,7 @@ MonoBehaviour:
   m_CastsShadows: 1
   m_SelfShadows: 0
   m_AlphaCutoff: 0
-  m_ApplyToSortingLayers: 00000000ad6cd2a6534b60e8057851a2
+  m_ApplyToSortingLayers: 000000006b9e1df2534b60e8057851a2ad6cd2a6
   m_ShapePath:
   - {x: -0.5, y: -0.5, z: 0}
   - {x: -0.5, y: 0.50000006, z: 0}
@@ -398,7 +398,7 @@ CapsuleCollider2D:
   m_Enabled: 1
   serializedVersion: 3
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: bae901f5318d0bd4bb5cc0d2d29c7241, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
