@@ -13,9 +13,14 @@ public class endlevelscript : MonoBehaviour
     public float transtime;
     public AudioSource audioSource;
     public BoxCollider2D boxCollider;
+    public GameObject player;
+    public SpriteRenderer spriteRenderer;
+    public ParticleSystem burstEffect;
+    public GameObject lightss;
 
     void Start()
     {
+        player = GameObject.FindWithTag("Player");
         startPos = transform.position;
         randomOffset = Random.Range(0f, Mathf.PI * 2f);
     }
@@ -30,6 +35,7 @@ public class endlevelscript : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
+            burstEffect.Play();
             boxCollider.enabled = false;
             audioSource.Play();
             nextlevel();
@@ -41,6 +47,9 @@ public class endlevelscript : MonoBehaviour
     }
     IEnumerator loadlevel(int lvlindex)
     {
+        lightss.SetActive(false);
+        player.tag = "Untagged";
+        spriteRenderer.enabled = false;
         animator.SetTrigger("start");
         yield return new WaitForSeconds(transtime);
         SceneManager.LoadScene(lvlindex);

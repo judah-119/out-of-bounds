@@ -6,6 +6,7 @@ public class colorscipt : MonoBehaviour
 {
     public SpriteRenderer spriteRenderer;
     public SpriteShapeRenderer spriteShapeRenderer;
+    public ParticleSystem particleSystemRef;
 
     public Image uiImage;
 
@@ -56,6 +57,11 @@ public class colorscipt : MonoBehaviour
         if (uiImage != null)
             uiImage.color = selectedColor;
 
-
+        if (particleSystemRef != null)
+        {
+            var main = particleSystemRef.main;
+            main.startColor = selectedColor;
+            
+        }
     }
 }
