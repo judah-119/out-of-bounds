@@ -16,7 +16,6 @@ public class ScreenWrap : MonoBehaviour
 
         if (mainCamera.orthographic)
         {
-            // Keep your old orthographic logic
             float camHeight = mainCamera.orthographicSize;
             float camWidth = camHeight * mainCamera.aspect;
 
@@ -29,7 +28,6 @@ public class ScreenWrap : MonoBehaviour
         }
         else
         {
-            // Perspective camera logic
             float distance = Mathf.Abs(viewPos.z - camPos.z);
 
             float frustumHeight = 2f * distance * Mathf.Tan(mainCamera.fieldOfView * 0.5f * Mathf.Deg2Rad);

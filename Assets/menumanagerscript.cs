@@ -12,6 +12,7 @@ public class menumanagerscript : MonoBehaviour
     public GameObject setting;
     public bool sttingopen = false;
     public static menumanagerscript Instance;
+    public bool tim = false;
 
     private void Awake()
     {
@@ -28,7 +29,7 @@ public class menumanagerscript : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -89,5 +90,21 @@ public class menumanagerscript : MonoBehaviour
     public void restart()
     {
         poopoo.instance.level = 1;
+        PlayerPrefs.DeleteAll();
+        PlayerPrefs.Save();
+        speedrun.instance.timer = 0;
+    }
+    public void run()
+    {
+        if (tim == false)
+        {
+            tim = true;
+            speedrun.instance.text.gameObject.SetActive(true);
+        }
+        else
+        {
+            tim = false;
+            speedrun.instance.text.gameObject.SetActive(false);
+        }
     }
 }

@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 
@@ -106,7 +106,7 @@ public class player_script : MonoBehaviour
     {
         if (jumpBufferCounter > 0 && coyoteCounter > 0)
         {
-            // INSTANT SQUASH when jumping
+            
             transform.localScale = new Vector3(jumpSquashX, jumpSquashY, 1f);
 
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumppower);

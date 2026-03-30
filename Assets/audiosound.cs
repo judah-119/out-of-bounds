@@ -25,10 +25,9 @@ public class AudioSettings : MonoBehaviour
     {
         float savedVolume = PlayerPrefs.GetFloat("MasterVolume", 1f);
 
-        // Set slider without triggering duplicate logic issues
+
         volumeSlider.value = savedVolume;
 
-        // Apply it to mixer
         float volume = Mathf.Log10(savedVolume) * 20;
         mixer.SetFloat("MasterVolume", volume);
     }
