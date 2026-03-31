@@ -69,7 +69,14 @@ public class pausemanager : MonoBehaviour
     }
     public void menu()
     {
-        pause = !pause;
+        if (pause == false)
+        {
+            pause = true;
+        }
+        if(pause == true)
+        {
+            pause = false;
+        }
         StartCoroutine(loadlevel());
         
     }
